@@ -1,0 +1,11 @@
+.card{
+  display: block
+}
+
+@media only screen and (max-width: 750px) {
+  .card{
+    min-width: 1000px;
+    overflow-x: scroll;
+    display: block;
+  }
+}

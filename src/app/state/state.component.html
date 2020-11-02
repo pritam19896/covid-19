@@ -1,0 +1,17 @@
+<p>FronEnd Created by Pritam Das</p>
+<h3 *ngIf="covidData.lastRefreshed">
+  LastUpdate: <span>{{covidData.lastRefreshed | date:'medium' }}</span>
+</h3>
+<h4>India</h4>
+
+<div *ngIf='indiaLabel.length && indiaData.length'>
+<app-my-pie-chart [graphLabels]='indiaLabel' [graphData]='indiaData'></app-my-pie-chart>
+</div>
+
+<h4>States</h4>
+<div *ngIf='statesName.length && allInOne.length'>
+  <app-my-bar-chart [graphLabels]='statesName' [graphData]='allInOne'></app-my-bar-chart>
+</div>
+
+
+
