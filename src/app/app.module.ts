@@ -9,8 +9,9 @@ import { AppComponent } from './app.component';
 import { MyBarChartComponent } from './my-bar-chart/my-bar-chart.component';
 import { StateComponent } from './state/state.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MyPieChartComponent } from './my-pie-chart/my-pie-chart.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MyPieChartComponent } from './my-pie-chart/my-pie-chart.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSliderModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,8 +20,6 @@ export class MyPieChartComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    console.log(this.graphLabels);
-    console.log(this.graphData);
     this.pieChartLabels = this.graphLabels;
     this.pieChartData = this.graphData;
   }

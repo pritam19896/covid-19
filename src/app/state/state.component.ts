@@ -8,7 +8,7 @@ import { GraphapiService } from '../services/graphapi.service';
 })
 export class StateComponent implements OnInit {
 
-  covidData;
+  covidData = null;
   statesName = [];
   dischargedArr = [];
   confirmedArr = [];
@@ -17,13 +17,15 @@ export class StateComponent implements OnInit {
   indiaLabel = [];
   indiaData = [];
 
-  constructor( private graphApi: GraphapiService) { }
+  constructor( private graphApi: GraphapiService) {
+   }
 
   ngOnInit(): void {
     this.getData();
   }
 
   getData() {
+
     this.graphApi.getGraphData().subscribe(rawData => {
       this.covidData = rawData;
       this.covidData.data.regional.forEach(element => {
@@ -41,7 +43,7 @@ export class StateComponent implements OnInit {
       this.allInOne = [ {data: this.dischargedArr , label: 'Discharged'},
       {data: this.confirmedArr , label: 'Confirmed'},
       {data: this.deathsArr , label: 'deaths'}
-     ];
+       ];
     });
   }
 
